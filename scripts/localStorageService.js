@@ -37,5 +37,12 @@ storageService = {
         }
     
         return exists;
+    },
+    getFromLocalStorage: function(storageKey){
+        return JSON.parse(localStorage.getItem(storageKey));
+    },
+    clearStorage: function(storageKey){
+        localStorage.removeItem(storageKey);
     }     
 }
+

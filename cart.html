@@ -7,9 +7,8 @@
     <title>Book Store</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/cart.css">
 </head>
-
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,8 +20,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</span></a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="./Index.html">Home</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./AboutUs.html">About Us</a>
@@ -30,19 +29,40 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./ContactUs.html">Contact Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="./Cart.html">Cart</a>
                 </li>
             </ul>
         </div>
     </nav>
-
     <div class="container">
-        <div class="row card-container"  id="card-container">
-
-        </div>
+        <h2>
+            Cart
+        </h2>
+        <div id="card-container"></div>
     </div>
 
+    <div class="container form-container">
+        <h2>Order</h2>
+        <hr/>
+        <div class="form-group">
+            <label for="customerName">Name</label>
+            <input class="form-control" id="customerName" placeholder="Please enter name" />
+        </div>
+        <div class="form-group">
+            <label for="customerEmail">Email</label>
+            <input class="form-control" id="customerEmail" placeholder="Please enter email" />
+        </div>
+        <div class="form-group">
+            <label for="customerAddress">Address</label>
+            <input class="form-control" id="customerAddress" placeholder="Please enter address" />
+        </div>
+        <div class="form-group">
+            <label for="customerPhone">Phone</label>
+            <input class="form-control" id="customerPhone" placeholder="Please enter phone" />
+        </div>
+        <button class="btn btn-primary" onclick="orderBooks()">Order</button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -55,7 +75,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./scripts/localStorageService.js"></script>
-    <script src="./scripts/app.js"></script>
+    <script src="./scripts/cart.js"></script>
 </body>
 
 </html>
